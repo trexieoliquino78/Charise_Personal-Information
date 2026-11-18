@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charise M. Oliquino - Personal Information</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <h1 class="main-title" onclick="animateSectionsWave()">Charise M. Oliquino</h1>
+
+        <!-- Section 1 -->
+        <div class="info-section">
+            <h2 class="section-title">1. Personal Information</h2>
+            <ul class="circle-list">
+                <li>Charise M. Oliquino</li>
+                <li>Grade 9-Emerald</li>
+                <li>Pariaan National High School</li>
+            </ul>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="info-section">
+            <h2 class="section-title">2. About Me!</h2>
+            <p class="about-paragraph">
+                My name is Charise M. Oliquino, I am 13 years old, from Binanderahan, Camalig, Albay. I am a Grade 9 student who is creative and curious person who loves arts and learning new things. I enjoy exploring different kinds of artwork because they inspire my imagination and help me express myself. I also love watching K-Dramas, listening to BTS, and spending time with animals, especially to my cat.
+            </p>
+            <p class="about-paragraph">
+                I love animals because they are caring, adorable, and important companions in our lives. My love for animals is one of the reasons why I dream of becoming a Veterinarian someday. I hope to continue developing my creativity, knowledge, and love for animals as I work toward achieving my dream.
+            </p>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="info-section">
+            <h2 class="section-title">3. Education Background</h2>
+            <ul class="circle-list">
+                <li>School: Pariaan National High School</li>
+                <li>With Honors: Grade 1 to 7</li>
+                <li>With High Honors: Grade 8</li>
+                <li>AP Club Business Manager: SY: 2026-2027</li>
+                <li>Class V-President: Grade-9 Emerald</li>
+            </ul>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="info-section">
+            <h2 class="section-title">4. Hobbies and Interest</h2>
+            <ul class="circle-list">
+                <li>Sports: Badminton</li>
+                <li>Arts: Drawing</li>
+                <li>Studying</li>
+            </ul>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="info-section">
+            <h2 class="section-title">5. Skills and Talent</h2>
+            <ul class="circle-list">
+                <li>Drawing</li>
+            </ul>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="info-section">
+            <h2 class="section-title">6. Goals and Aspirations</h2>
+            <ul class="circle-list">
+                <li>Career Goals: To become a Veterinarian</li>
+                <li>Personal Ambitions: To travel the world while helping animals and make my parents proud.</li>
+            </ul>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="info-section">
+            <h2 class="section-title">7. Favorite Quote</h2>
+            <p class="quote-text">
+                "The Past is Your Lesson, The Present is your Gift, The Future is your Motivation."
+            </p>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="info-section">
+            <h2 class="section-title">8. Contact Information</h2>
+            <ul class="circle-list">
+                <li>
+                    <a href="mailto:oliquinocharise258@gmail.com" class="email-link">oliquinocharise258@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript for Header Click Wave Animation -->
+    <script>
+        /**
+         * Triggers a sequential wave translation across all 8 sections
+         * when the user clicks the main header title.
+         */
+        function animateSectionsWave() {
+            const sections = document.querySelectorAll('.info-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.transform = 'translateX(12px)';
+                    section.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+                    section.style.borderLeftColor = '#9e2a55';
+                    setTimeout(() => {
+                        section.style.transform = '';
+                        section.style.backgroundColor = '';
+                        section.style.borderLeftColor = '';
+                    }, 450);
+                }, index * 80);
+            });
+        }
+    </script>
+
+</body>
+</html>

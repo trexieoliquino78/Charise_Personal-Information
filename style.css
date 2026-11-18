@@ -1,0 +1,192 @@
+/* =========================================================
+   Charise M. Oliquino - Personal Information CSS
+   Includes: Pink Pastel Theme (#ffd6e7), Decorative Frame Border,
+   Hover Transitions, Translations, and Keyframe Animations
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f8c8dc;
+    background-image: linear-gradient(135deg, #f8c8dc 0%, #f4a4c0 100%);
+    color: #1f1f1f;
+    padding: 35px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+/* Main Profile Frame with Double-Layered Border */
+.profile-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffd6e7;
+    border: 8px solid #d65a88;
+    outline: 3px solid #9e2a55;
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 12px 30px rgba(158, 42, 85, 0.25);
+    animation: slideUpFade 0.9s ease-out forwards;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(158, 42, 85, 0.35);
+}
+
+/* Main Header Title */
+.main-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #e0638d;
+    text-shadow: 2px 2px 0px #ffffff, 3px 3px 6px rgba(158, 42, 85, 0.3);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 2px dashed #d65a88;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+    animation: gentleFloat 3s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+
+.main-title:hover {
+    color: #b0285a;
+    transform: scale(1.05);
+}
+
+/* Section Blocks (1 to 😎 */
+.info-section {
+    margin-bottom: 18px;
+    padding: 12px 18px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-left: 5px solid #d65a88;
+    border-radius: 0 10px 10px 0;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-left-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-left-color: #9e2a55;
+    box-shadow: 4px 4px 12px rgba(158, 42, 85, 0.15);
+}
+
+/* Section Headings */
+.section-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 6px;
+    transition: color 0.25s ease;
+}
+
+.info-section:hover .section-title {
+    color: #9e2a55;
+}
+
+/* Hollow Circle Bullet Lists */
+ul.circle-list {
+    list-style-type: circle;
+    padding-left: 35px;
+}
+
+ul.circle-list li {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 3px;
+    transition: transform 0.25s ease, color 0.25s ease;
+    cursor: default;
+}
+
+ul.circle-list li:hover {
+    transform: translateX(6px);
+    color: #b0285a;
+    font-weight: bold;
+}
+
+/* Paragraph & Quote Styling */
+.about-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.about-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.05rem;
+    padding: 8px 15px;
+    color: #2b2b2b;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.quote-text:hover {
+    transform: scale(1.02);
+    color: #9e2a55;
+}
+
+/* Contact Email Link Hover */
+.email-link {
+    color: #1f1f1f;
+    text-decoration: none;
+    border-bottom: 1px dotted #9e2a55;
+    transition: color 0.25s ease, background-color 0.25s ease, padding 0.25s ease;
+}
+
+.email-link:hover {
+    color: #ffffff;
+    background-color: #d65a88;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Keyframe Animations */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gentleFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .profile-container {
+        padding: 20px 18px;
+    }
+
+    .main-title {
+        font-size: 1.9rem;
+    }
+}
